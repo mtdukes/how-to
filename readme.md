@@ -10,6 +10,8 @@ o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bo
 ```
 A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html).
 
+[grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file)
+
 # Command line tools
 A collection of tips and tricks for working with tools executed using bash terminals.
 
@@ -107,6 +109,12 @@ Saves the file from the specified URL.
 wget -i file_list.txt
 ```
 Saves individual files from URLs specified in a TXT file, one URL on each line.
+
+### Download a directory
+```bash
+wget --recursive --no-parent http://mtdukes.com
+```
+Recursively download an entire site's contents.
 
 ## file
 Tool to do various file formatting things I think.
