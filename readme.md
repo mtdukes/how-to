@@ -92,3 +92,27 @@ Combine all the PDF files in the present directory into a single file. *Note: ch
 esri2geojson https://services.arcgis.com/iFBq2AW9XO0jYYF7/arcgis/rest/services/Covid19byZIPnew/FeatureServer/0 nc_zipDATE.geojson
 ```
 Download data from the ESRI REST endpoint that powers the N.C. DHHS COVID map of cases by zip code and save it as a geojson file.
+
+## wget
+A power tool for recursively downloading files, for example from the Web.
+
+### Download a single file
+```bash
+wget http://mtdukes.com/work.html
+```
+Saves the file from the specified URL.
+
+### Download a list of files
+```bash
+wget -i file_list.txt
+```
+Saves individual files from URLs specified in a TXT file, one URL on each line.
+
+## file
+Tool to do various file formatting things I think.
+
+### Detect encoding of a file
+```bash
+file -I input.csv
+```
+Detect encoding of a file.
