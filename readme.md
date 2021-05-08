@@ -131,7 +131,7 @@ Detect encoding of a file.
 ## sed
 Tool to make substitutions in a text file.
 
-## Replace all instances of a word and output result to new file
+### Replace all instances of a word and output result to new file
 
 ```bash
 sed "s/dook/duke/g" ./old.csv > new.csv
