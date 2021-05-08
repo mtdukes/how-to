@@ -1,17 +1,17 @@
 
 ```
-ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.   
-`888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b  
- 888     888  888      888   `888.   .8888.   .8'                888      888      888 
- 888ooooo888  888      888    `888  .8'`888. .8'                 888      888      888 
- 888     888  888      888     `888.8'  `888.8'     8888888      888      888      888 
- 888     888  `88b    d88'      `888'    `888'                   888      `88b    d88' 
-o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bood8P'  
+ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
+`888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
+ 888     888  888      888   `888.   .8888.   .8'                888      888      888
+ 888ooooo888  888      888    `888  .8'`888. .8'                 888      888      888
+ 888     888  888      888     `888.8'  `888.8'     8888888      888      888      888
+ 888     888  `88b    d88'      `888'    `888'                   888      `88b    d88'
+o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bood8P'
 ```
 A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html).
 
 ### Jump to:
-**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file)
+**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed)
 
 **Convenience files** [U.S. states](https://github.com/mtdukes/how-to#us-states) | [N.C. counties](https://github.com/mtdukes/how-to#us-states)
 
@@ -127,6 +127,23 @@ Tool to do various file formatting things I think.
 file -I input.csv
 ```
 Detect encoding of a file.
+
+## sed
+Tool to make substitutions in a text file.
+
+## Replace all instances of a word and output result to new file
+
+```bash
+sed "s/dook/duke/g" ./old.csv > new.csv
+```
+
+### Replace all instance of a word within the file
+Make sure to make a backup in case something happens
+
+```bash
+sed -i "s/dook/duke/g" ./data.csv
+```
+
 
 # Convenience files
 Collections of commonly used lists and references in various data structures.
