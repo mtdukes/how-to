@@ -138,10 +138,16 @@ sed "s/dook/duke/g" ./old.csv > new.csv
 ```
 
 ### Replace all instance of a word within the file
-Make sure to make a backup in case something happens
+Substitute directly in the file by passing an empty string after the `-i` flag.
 
 ```bash
-sed -i "s/dook/duke/g" ./data.csv
+sed -i "" "s/dook/duke/g" ./data.csv
+```
+
+Pass a file name to make a backup.
+
+```bash
+sed -i "./data-backup.csv" "s/dook/duke/g" ./data.csv
 ```
 
 
