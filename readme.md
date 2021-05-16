@@ -1,17 +1,17 @@
 
 ```
-ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.   
-`888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b  
- 888     888  888      888   `888.   .8888.   .8'                888      888      888 
- 888ooooo888  888      888    `888  .8'`888. .8'                 888      888      888 
- 888     888  888      888     `888.8'  `888.8'     8888888      888      888      888 
- 888     888  `88b    d88'      `888'    `888'                   888      `88b    d88' 
-o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bood8P'  
+ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
+`888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
+ 888     888  888      888   `888.   .8888.   .8'                888      888      888
+ 888ooooo888  888      888    `888  .8'`888. .8'                 888      888      888
+ 888     888  888      888     `888.8'  `888.8'     8888888      888      888      888
+ 888     888  `88b    d88'      `888'    `888'                   888      `88b    d88'
+o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bood8P'
 ```
 A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html).
 
 ### Jump to:
-**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file)
+**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed)
 
 **Convenience files** [U.S. states](https://github.com/mtdukes/how-to#us-states) | [N.C. counties](https://github.com/mtdukes/how-to#us-states)
 
@@ -128,6 +128,29 @@ file -I input.csv
 ```
 Detect encoding of a file.
 
+## sed
+Tool to make substitutions in a text file.
+
+### Replace all instances of a word and output result to new file
+
+```bash
+sed "s/dook/duke/g" ./old.csv > new.csv
+```
+
+### Replace all instance of a word within the file
+Substitute directly in the file by passing an empty string after the `-i` flag.
+
+```bash
+sed -i "" "s/dook/duke/g" ./data.csv
+```
+
+Pass a file name to make a backup.
+
+```bash
+sed -i "./data-backup.csv" "s/dook/duke/g" ./data.csv
+```
+
+
 # Convenience files
 Collections of commonly used lists and references in various data structures.
 
@@ -136,7 +159,7 @@ Collections of commonly used lists and references in various data structures.
 
 ## N.C. counties
 
--   [NC counties, comma- and line-separated and text-qualified by single quotes](https://gist.github.com/mtdukes/ed03837107a7e173a56b71cf7c785424)
+- [NC counties, comma- and line-separated and text-qualified by single quotes](https://gist.github.com/mtdukes/ed03837107a7e173a56b71cf7c785424)
 - [NC counties and election/voter data codes, tab-delimited](https://gist.github.com/mtdukes/c3abc68866e884a7b0fa418e712b40c8)
--   [NC counties and court codes, as tuples](https://gist.github.com/mtdukes/88e089e6dd08b12e57667dd7fe3b4305)
+- [NC counties and court codes, as tuples](https://gist.github.com/mtdukes/88e089e6dd08b12e57667dd7fe3b4305)
 - [NC counties and court codes, tab-delimited](https://gist.github.com/mtdukes/a1689d5c678cc52b3efd6ac1a3409e70)
