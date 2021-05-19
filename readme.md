@@ -1,4 +1,5 @@
 
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -132,24 +133,43 @@ Detect encoding of a file.
 Tool to make substitutions in a text file.
 
 ### Replace all instances of a word and output result to new file
-
 ```bash
 sed "s/dook/duke/g" ./old.csv > new.csv
 ```
+[Syntax](https://www.tutorialspoint.com/unix/unix-regular-expressions.htm) uses `/` as a delimiter to separate patterns you want to substitute.
 
 ### Replace all instance of a word within the file
-Substitute directly in the file by passing an empty string after the `-i` flag.
-
 ```bash
 sed -i "" "s/dook/duke/g" ./data.csv
 ```
+Substitute directly in the file by passing an empty string after the `-i` flag.
 
-Pass a file name to make a backup.
+### Pass a file name to make a backup.
 
 ```bash
 sed -i "./data-backup.csv" "s/dook/duke/g" ./data.csv
 ```
 
+# Browser tricks
+Plugins, URL parameters and other neat stuff.
+
+## PDFs
+Tips and tricks for handling PDFs in a Web browser (like Chrome)
+
+### Jump to a page
+```
+https://assets.avigilon.com/file_library/pdf/acc7/avigilon-player7-en.pdf#page=21
+```
+Pass the `page` number as a URL parameter to link directly to a page.
+
+## Video
+Shortcuts and other cool things that help navigate various online video players.
+
+### Jump to a time in YouTube
+```
+https://youtu.be/UwVNkfCov1k?t=30
+```
+Add a `t` parameter to specify the jump point in seconds.
 
 # Convenience files
 Collections of commonly used lists and references in various data structures.
