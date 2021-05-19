@@ -152,6 +152,35 @@ Substitute directly in the file by passing an empty string after the `-i` flag.
 sed -i "./data-backup.csv" "s/dook/duke/g" ./data.csv
 ```
 
+# R packages
+
+## scales
+[A library](https://scales.r-lib.org/) to make scaling and labeling easier.
+
+### Show figures as dollars
+```R
+vax_income %>%
+  ggplot(aes(x = median_income, y=PctTotal)) +
+  geom_point() +
+  scale_x_continuous(labels = scales::dollar_format())
+```
+The `dollar_format` function shortcuts the annoying parsing issues.
+
+## ggpmisc
+[Miscellaneous extensions](https://exts.ggplot2.tidyverse.org/ggpmisc.html) to the ggplot package.
+
+### Include a regression equation on your scatterplot
+```R
+vax_income %>%
+  ggplot(aes(x = median_income, y = pct_total)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, show.legend = FALSE) +
+  stat_poly_eq(aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")), 
+               label.x.npc = "right", label.y.npc = 0.15,
+               formula = y ~ x, parse = TRUE, size = 3)
+```
+The `stat_poly_eq` function lets you annotate the graph with a regression formula. *BONUS: [What's a good value for R-squared?](https://people.duke.edu/~rnau/rsquared.htm)*
+
 # Browser tricks
 Plugins, URL parameters and other neat stuff.
 
