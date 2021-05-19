@@ -1,5 +1,4 @@
 
-
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -9,10 +8,12 @@ ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .ooo
  888     888  `88b    d88'      `888'    `888'                   888      `88b    d88'
 o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bood8P'
 ```
-A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html).
+A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html). Use `CMD` + `F` to search the page, or the jump menu below if you know what you're looking for.
 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed)
+
+**R packages** [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc)
 
 **Browser tricks** [PDFs](https://github.com/mtdukes/how-to#pdfs) | [Video](https://github.com/mtdukes/how-to#video)
 
