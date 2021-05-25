@@ -15,6 +15,8 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 
 **R packages** [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc)
 
+**Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios)
+
 **Browser tricks** [PDFs](https://github.com/mtdukes/how-to#pdfs) | [Video](https://github.com/mtdukes/how-to#video)
 
 **Convenience files** [U.S. states](https://github.com/mtdukes/how-to#us-states) | [N.C. counties](https://github.com/mtdukes/how-to#us-states)
@@ -38,6 +40,8 @@ grep "\"DUKES\",\"MICHAEL\",\"TYLER\"" absentee.csv > dukes.csv
 ```
 Search for a string with quotes and output all lines to a file.
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 ## head/tail
 Get a preview of a file.
 
@@ -53,6 +57,8 @@ Print the first 10 lines of a file to the command line.
 head -1 absentee.csv > absentee_header.csv
 ```
 Get the first line of a file and save it to a CSV file.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## ffmpeg
 A power tool for processing and converting video and audio files.
@@ -84,6 +90,9 @@ Combine all of the files recorded in a text file called `vidlist.txt`, which loo
 file '/Users/username/directory/vid_seq001.avi'
 file '/Users/username/directory/vid_seq002.avi'
 ```
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 ## pdftk
 A power tool for processing and converting PDF files.
 
@@ -93,6 +102,8 @@ pdftk *.pdf cat output all_documents.pdf
 ```
 Combine all the PDF files in the present directory into a single file. *Note: check to make sure the capitalization of the filetype matches.*
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 ## esridump
 [A targeted utility](https://github.com/openaddresses/pyesridump) to pull down geographic data from ESRI maps.
 
@@ -101,6 +112,8 @@ Combine all the PDF files in the present directory into a single file. *Note: ch
 esri2geojson https://services.arcgis.com/iFBq2AW9XO0jYYF7/arcgis/rest/services/Covid19byZIPnew/FeatureServer/0 nc_zipDATE.geojson
 ```
 Download data from the ESRI REST endpoint that powers the N.C. DHHS COVID map of cases by zip code and save it as a geojson file.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## wget
 A power tool for recursively downloading files, for example from the Web.
@@ -123,6 +136,8 @@ wget --recursive --no-parent http://mtdukes.com
 ```
 Recursively download an entire site's contents.
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 ## file
 Tool to do various file formatting things I think.
 
@@ -131,6 +146,8 @@ Tool to do various file formatting things I think.
 file -I input.csv
 ```
 Detect encoding of a file.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## sed
 Tool to make substitutions in a text file (submitted by [Chris Alcantara](https://github.com/chrisalcantara)).
@@ -153,6 +170,8 @@ Substitute directly in the file by passing an empty string after the `-i` flag.
 sed -i "./data-backup.csv" "s/dook/duke/g" ./data.csv
 ```
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 # R packages
 
 ## scales
@@ -166,6 +185,8 @@ vax_income %>%
   scale_x_continuous(labels = scales::dollar_format())
 ```
 The `dollar_format` function shortcuts the annoying parsing issues.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## ggpmisc
 [Miscellaneous extensions](https://exts.ggplot2.tidyverse.org/ggpmisc.html) to the ggplot package.
@@ -181,6 +202,8 @@ vax_income %>%
                formula = y ~ x, parse = TRUE, size = 3)
 ```
 The `stat_poly_eq` function lets you annotate the graph with a regression formula. *BONUS: [What's a good value for R-squared?](https://people.duke.edu/~rnau/rsquared.htm)*
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 # Math for journalism
 Formulas and concepts I always have to look up. For more, read [Numbers in the Newsroom](https://www.ire.org/product/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition-e-version/) by Sarah Cohen.
@@ -204,15 +227,16 @@ Next, do the same for white students.
 ```
 
 Then you compare the two rates of suspension.
-
 ```R
 0.167 / 0.1 = 1.7
 ``` 
 
 So black students are suspended at about 1.7 times the rate of white students.
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 ## Odds ratios
-Compare the likelihood of something happening for one group compared to another ([h/t to Arianna Giorgi](https://twitter.com/ArianaNGiorgi/status/1068208108596588544)). Often used in medical contexts. For more, see this worksheet from the University of Delaware.
+Compare the likelihood of something happening for one group compared to another ([h/t to Arianna Giorgi](https://twitter.com/ArianaNGiorgi/status/1068208108596588544)). Often used in medical contexts. For more, see [this worksheet from the University of Delaware](https://github.com/mtdukes/how-to/blob/main/documents/odds_ratios.pdf).
 
 ### Comparing two groups
 Instead of calculating and comparing the *rate* of something happening in a subgroup, calculating an odds ratio means you have to look at how much more likely something is to happen *than not happen* within that subgroup. So:
@@ -234,7 +258,9 @@ Now you can compare the ratios.
 ```R
 7 / 1.1 = 6.4
 ```
-So girls are 6.4 times as likely to pass the test than boys
+So girls are 6.4 times as likely to pass the test than boys.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 # Browser tricks
 Plugins, URL parameters and other neat stuff.
@@ -248,6 +274,8 @@ https://assets.avigilon.com/file_library/pdf/acc7/avigilon-player7-en.pdf#page=2
 ```
 Pass the `page` number as a URL parameter to link directly to a page.
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 ## Video
 Shortcuts and other cool things that help navigate various online video players.
 
@@ -257,11 +285,15 @@ https://youtu.be/UwVNkfCov1k?t=30
 ```
 Add a `t` parameter to specify the jump point in seconds.
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 # Convenience files
 Collections of commonly used lists and references in various data structures.
 
 ## U.S. states
 -   [State names and postal code abbreviations, comma- and line-separated and text-qualified by single quotes](https://gist.github.com/mtdukes/e6636bb7e7423fbf0faf52134257d675)
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## N.C. counties
 
@@ -269,3 +301,5 @@ Collections of commonly used lists and references in various data structures.
 - [NC counties and election/voter data codes, tab-delimited](https://gist.github.com/mtdukes/c3abc68866e884a7b0fa418e712b40c8)
 - [NC counties and court codes, as tuples](https://gist.github.com/mtdukes/88e089e6dd08b12e57667dd7fe3b4305)
 - [NC counties and court codes, tab-delimited](https://gist.github.com/mtdukes/a1689d5c678cc52b3efd6ac1a3409e70)
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
