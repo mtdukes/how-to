@@ -133,7 +133,7 @@ file -I input.csv
 Detect encoding of a file.
 
 ## sed
-Tool to make substitutions in a text file.
+Tool to make substitutions in a text file (submitted by [Chris Alcantara](https://github.com/chrisalcantara)).
 
 ### Replace all instances of a word and output result to new file
 ```bash
@@ -181,6 +181,60 @@ vax_income %>%
                formula = y ~ x, parse = TRUE, size = 3)
 ```
 The `stat_poly_eq` function lets you annotate the graph with a regression formula. *BONUS: [What's a good value for R-squared?](https://people.duke.edu/~rnau/rsquared.htm)*
+
+# Math for journalism
+Formulas and concepts I always have to look up. For more, read [Numbers in the Newsroom](https://www.ire.org/product/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition-e-version/) by Sarah Cohen.
+
+## Rate comparisons
+Calculating the rate of something happening in a subgroup and comparing it to another can help suss out disproportionate impact, especially when the groups are different sizes.
+
+### Comparing two groups
+
+> A school has 300 white and 120 Black students. Last year, 30 white
+> students were suspended, and 20 Black students were suspended.
+
+It may be enough to say that Black students made up 60% of suspensions while only making up 29% of the school. But you may want to put a finer point on the disparity. First, calculate the suspension rate for Black students
+```R
+20 / 120 = 0.17
+```
+
+Next, do the same for white students.
+```R
+30 / 300 = 0.1
+```
+
+Then you compare the two rates of suspension.
+
+```R
+0.167 / 0.1 = 1.7
+``` 
+
+So black students are suspended at about 1.7 times the rate of white students.
+
+## Odds ratios
+Compare the likelihood of something happening for one group compared to another ([h/t to Arianna Giorgi](https://twitter.com/ArianaNGiorgi/status/1068208108596588544)). Often used in medical contexts. For more, see this worksheet from the University of Delaware.
+
+### Comparing two groups
+Instead of calculating and comparing the *rate* of something happening in a subgroup, calculating an odds ratio means you have to look at how much more likely something is to happen *than not happen* within that subgroup. So:
+
+> A class has 21 boys and 16 girls. On a recent test, 11 boys and 14
+> girls passed.
+
+First calculate the likelihood that boys passed the test vs. not passing the tests
+```R
+11 / 10 = 1.1
+```
+
+Do the same for the girls.
+```R
+14 / 2 = 7
+```
+
+Now you can compare the ratios.
+```R
+7 / 1.1 = 6.4
+```
+So girls are 6.4 times as likely to pass the test than boys
 
 # Browser tricks
 Plugins, URL parameters and other neat stuff.
