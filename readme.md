@@ -1,4 +1,5 @@
 
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -8,7 +9,7 @@ ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .ooo
  888     888  `88b    d88'      `888'    `888'                   888      `88b    d88'
 o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bood8P'
 ```
-A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html). Use `CMD` + `F` to search the page, or the jump menu below if you know what you're looking for.
+A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html). Use `CMD` + `F` to search the page, or the jump menu below if you know what you're looking for.https://stackedit.io/app
 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed)
@@ -171,6 +172,23 @@ sed -i "./data-backup.csv" "s/dook/duke/g" ./data.csv
 ```
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## wc
+A basic character counting utility for the command line.
+
+### Count the number of lines in a file
+```bash
+wc -l < data_file.txt
+```
+The less-than flag excludes the file name from the results.
+
+### Pipe the results of some data and count the lines
+```bash
+curl mtdukes.com --silent | wc -l
+```
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 
 # R packages
 
