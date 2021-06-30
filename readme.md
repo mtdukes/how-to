@@ -1,5 +1,4 @@
 
-
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -14,7 +13,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc)
 
-**R packages** [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc)
+**R packages** [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr)
 
 **Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios)
 
@@ -220,6 +219,18 @@ vax_income %>%
                formula = y ~ x, parse = TRUE, size = 3)
 ```
 The `stat_poly_eq` function lets you annotate the graph with a regression formula. *BONUS: [What's a good value for R-squared?](https://people.duke.edu/~rnau/rsquared.htm)*
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## dplyr
+A ["grammar of data manipulation"](https://dplyr.tidyverse.org/) and part of the [tidyverse](https://www.tidyverse.org/) package.
+
+### Get a random sample of rows
+```R
+nc_voters %>% 
+  sample_n(10)
+```
+Specify the number of rows from the dataframe to return.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
