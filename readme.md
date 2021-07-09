@@ -14,7 +14,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc)
 
-**R packages** [base]([scales](https://github.com/mtdukes/how-to#base) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr)
+**R packages** [base](https://github.com/mtdukes/how-to#base) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr)
 
 **Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios)
 
