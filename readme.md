@@ -1,5 +1,6 @@
 
 
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -12,7 +13,7 @@ o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bo
 A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html). Use `CMD` + `F` to search the page, or the jump menu below if you know what you're looking for.
 
 ### Jump to:
-**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc)
+**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | imagemagick
 
 **R packages** [base](https://github.com/mtdukes/how-to#base) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr)
 
@@ -91,6 +92,12 @@ Combine all of the files recorded in a text file called `vidlist.txt`, which loo
 file '/Users/username/directory/vid_seq001.avi'
 file '/Users/username/directory/vid_seq002.avi'
 ```
+
+### Create a video from a sequence of images
+```bash
+ffmpeg -r 1/5 -i img%03d.jpg -c:v libx264 -vf "fps=25,format=yuv420p" out.mp4
+```
+Read in a sequence of images from a folder and write to an mp4 file. The `-r` flag is the framerate, where the duration of each image is the inverse of the provided value (e.g. 1/5 is 5 seconds, 60 is 1/60 of a second). The `-i` flag specifies the filename structure, with 0 padding specified (e.g.  img%03d.jpg will iterate through img001.jpg, img002.jpg, img003.jpg etc.). [More details here](https://hamelot.io/visualization/using-ffmpeg-to-convert-a-set-of-images-into-a-video/).
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
@@ -180,15 +187,23 @@ A basic character counting utility for the command line.
 ```bash
 wc -l < data_file.txt
 ```
-The less-than flag excludes the file name from the results.
+The `<` flag excludes the file name from the results.
 
 ### Pipe the results of some data and count the lines
 ```bash
 curl mtdukes.com --silent | wc -l
 ```
 
-[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+## imagemagick
+[A power tool](https://imagemagick.org/index.php) for quickly editing images.
 
+### Batch crop a folder of images
+```bash
+mogrify -crop 800x450+0+40 -path ./cropped *.jpg
+```
+In a folder of images, crop every jpg image at size 800x450, with a 0px offset from the left (x) and a 40px offset from the top (y).
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 # R packages
 
