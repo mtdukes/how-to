@@ -209,18 +209,22 @@ A few common shortcuts save you from typing in RStudio.
 
 ### Start a new section
 <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+
 Prompt for a new label used in the document outline for an R script
 
 ### Execute a command
 <kbd>Command</kbd> + <kbd>Enter</kbd>
+
 Run a section of code in your R script.
 
 ### Use a pipe
 <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>
+
 Input a `%>%` at your cursor to pipe output to the next line.
 
 ### Use an assignment
 <kbd>Option</kbd> + <kbd>-</kbd>
+
 Input a `<-` at your cursor to assign output to a variable.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
