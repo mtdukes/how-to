@@ -12,7 +12,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick)
 
-**R packages** [base](https://github.com/mtdukes/how-to#base) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr)
+**R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) |[base](https://github.com/mtdukes/how-to#base) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr)
 
 **Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios)
 
@@ -204,8 +204,41 @@ In a folder of images, crop every jpg image at size 800x450, with a 0px offset f
 
 # R packages
 
+## shortcut keys
+A few common shortcuts save you from typing in RStudio.
+
+### Start a new section
+<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+Prompt for a new label used in the document outline for an R script
+
+### Execute a command
+<kbd>Command</kbd> + <kbd>Enter</kbd>
+Run a section of code in your R script.
+
+### Use a pipe
+<kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>
+Input a `%>%` at your cursor to pipe output to the next line.
+
+### Use an assignment
+<kbd>Option</kbd> + <kbd>-</kbd>
+Input a `<-` at your cursor to assign output to a variable.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 ## base
 The stripped down version of R has lots of built-in stuff worth using.
+
+### Clear all environment variables
+```R
+rm(list = ls())
+```
+Start with a clean slate using the `rm` command.
+
+### Set your working directory
+```R
+setwd('~/projects/newsobserver/big_investigation/data')
+```
+Save time otherwise spent typing out long path names.
 
 ### Get unique values
 ```R
