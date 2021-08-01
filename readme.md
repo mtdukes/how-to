@@ -1,3 +1,4 @@
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -257,6 +258,23 @@ wake_sales %>%
   .[duplicated(.), ]
 ```
 Generates a dataframe of duplicated rows, comparing all fields.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## readr
+A ["fast and friendly way"](https://www.rdocumentation.org/packages/readr/versions/1.3.1) to read in data. Part of the tidyverse suite of packages.
+
+### Get the file encoding
+```R
+guess_encoding(file = 'annoying_file.csv')
+```
+Useful for errors reading in the file (like embedded nulls).
+
+### Specify a file encoding when loading data
+```R
+my_dataframe <- read_tsv('annoying_file.csv', locale = locale(encoding = "UTF-16LE") )
+```
+Specify non-UTF encodings you get from the `guess_encoding` output.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
