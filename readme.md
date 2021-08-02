@@ -1,4 +1,5 @@
 
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -13,7 +14,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick)
 
-**R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) |[base](https://github.com/mtdukes/how-to#base) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr)
+**R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr)
 
 **Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios)
 
@@ -259,6 +260,46 @@ wake_sales %>%
 ```
 Generates a dataframe of duplicated rows, comparing all fields.
 
+### Get a list of files in a folder
+```R
+county_data <- list.files(path = './data/counties', full.names = TRUE)
+```
+The `full.names` flag prepends the directory path if `TRUE`, and file name only if `false`.
+
+### Remove a package
+```R
+detach("package:plyr", unload=TRUE)
+```
+Removing a package can help when you have conflicts between functions with the same name.
+
+### Format a date
+```R
+as.Date('01/01/2001', format = '%m/%d/%Y' )
+```
+Specify the format explicitly [using the syntax](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/strptime) from `strptime`.
+
+### Find and replace characters in a string
+```R
+gsub(',', '', 'womp,womp')
+gsub('\\(', ',for real', 'Replace the literal parenthesis (' )
+```
+Enter a [pattern](http://uc-r.github.io/regex), replacement and data value to search.
+
+### Load a file with an annoying encoding
+```R
+vax_data <- read.delim('cnty20210731.csv', fileEncoding = 'UTF-16LE', sep = '\t',
+                              col.names = c('index', 'county', 'week_of', 'age12_17',
+                              'age18_24', 'age25_49', 'age50_64')
+                              )
+```
+The [readr package](https://github.com/mtdukes/how-to#readr) is my preferred method for importing data, sometimes [it chokes](https://github.com/tidyverse/readr/issues/306) on strange file encodings even with the `locale` parameter set. So this method is worth trying.
+
+### Turn off scientific notation
+```R
+options(scipen = 999)
+```
+Prints out the full numeral in your current workspace.
+
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## readr
@@ -318,6 +359,43 @@ nc_voters %>%
   sample_n(10)
 ```
 Specify the number of rows from the dataframe to return.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## plyr
+[Tools to solve common problems](https://www.rdocumentation.org/packages/plyr/versions/1.8.6), like performing the same task over and over. *NOTE: This package conflicts with some dplyr commands, so if you're getting weird errors, this might be why.*
+
+### Repeat a function using a list as input
+```R
+precinct_sort <- ldply(county_files, read_tsv, na='', col_types = cols(
+  county_id = col_double(),
+  election_dt = col_date(format = '%m/%d/%Y'),
+  contest_id = col_double(),
+  contest_title = col_character(),
+  contest_vote_for = col_double(),
+  precinct_code = col_character(),
+  candidate_id = col_double(),
+  candidate_name = col_character(),
+  candidate_party_lbl = col_character(),
+  voting_method_lbl = col_character(),
+  voting_method_rslt_desc = col_character(),
+  vote_ct = col_double()
+))
+```
+The first parameter is the list and the second is the function you want to repeat. Everything that follows are parameters specific to your function. You can use your own functions too.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## clipr
+[A set of simple commands](https://github.com/mdlincoln/clipr) for writing to and reading from the clipboard.
+
+### Write to the clipboard
+```R
+age_group_populations %>%
+  mutate(lookup_helper = paste0(fips,age_group), .after = 'age_group') %>% 
+  write_clip()
+```
+Copies dataframes in a tab-delimited format for easy pasting into spreadsheets.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
