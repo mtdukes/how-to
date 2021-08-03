@@ -311,6 +311,14 @@ guess_encoding(file = 'annoying_file.csv')
 ```
 Useful for errors reading in the file (like embedded nulls).
 
+### Pull data from a GitHub gist
+```R
+county_fips <- read_tsv( url(
+    'https://gist.githubusercontent.com/mtdukes/e0c6563927fb4f3e48f4e092b84b7023/raw/56e5abc1daf2277b5d901cbc25b9f9e64ab8c073/nc_fips_tab.tsv'
+    ))
+```
+Use the `url` function from base R to pull formatted data posted in public gists, [like these convenience files](https://github.com/mtdukes/how-to#convenience-files). Swap out the delimiter function (read_csv, read_delim, etc) as needed. Get the URL by clicking "Raw" on the Gist page.
+
 ### Specify a file encoding when loading data
 ```R
 my_dataframe <- read_tsv('annoying_file.csv', locale = locale(encoding = "UTF-16LE") )
