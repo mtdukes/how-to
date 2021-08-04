@@ -1,5 +1,3 @@
-
-
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -14,7 +12,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick)
 
-**R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr)
+**R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
 
 **Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios)
 
@@ -404,6 +402,26 @@ age_group_populations %>%
   write_clip()
 ```
 Copies dataframes in a tab-delimited format for easy pasting into spreadsheets.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## googlesheets4
+[Read and write data](https://googlesheets4.tidyverse.org/) from Google Sheets. Part of the tidyverse.
+
+### Read in data from a Google Sheet
+```R
+test <- read_sheet('https://docs.google.com/spreadsheets/d/<<SPREADSHEET_ID>>/edit#gid=<<SHEET_ID>>')
+```
+Authentication may be required depending on permissions. Accepts the URL of the sheet and writes to a dataframe.
+
+### Overwrite data in an existing sheet
+```R
+write_sheet(census_data,
+            as_sheets_id('https://docs.google.com/spreadsheets/d/<<SPREADSHEET_ID>>/edit#gid=<<SHEET_ID>>'),
+            sheet = "census_data"
+            )
+```
+Accepts a dataframe and writes to a sheet specified with the `as_sheets_id` function and a URL. If a sheet name isn't specified, it will create a new sheet with the dataframe name.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
