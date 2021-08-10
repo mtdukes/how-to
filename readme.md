@@ -512,13 +512,14 @@ Collections of commonly used lists and references in various data structures.
 
 ## U.S. states
 -   [State names and postal code abbreviations, comma- and line-separated and text-qualified by single quotes](https://gist.github.com/mtdukes/e6636bb7e7423fbf0faf52134257d675)
+-   [US counties and FIPS codes by state, tab-delimited](https://gist.github.com/mtdukes/ff6e59acde4858a8b174a83d2fce915c)
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## N.C. counties
 
 - [NC counties, comma- and line-separated and text-qualified by single quotes](https://gist.github.com/mtdukes/ed03837107a7e173a56b71cf7c785424)
-- [NC counties and FIPS cods, tab-delimited](https://gist.github.com/mtdukes/e0c6563927fb4f3e48f4e092b84b7023)
+- [NC counties and FIPS codes, tab-delimited](https://gist.github.com/mtdukes/e0c6563927fb4f3e48f4e092b84b7023)
 - [NC counties and election/voter data codes, tab-delimited](https://gist.github.com/mtdukes/c3abc68866e884a7b0fa418e712b40c8)
 - [NC counties and court codes, as tuples](https://gist.github.com/mtdukes/88e089e6dd08b12e57667dd7fe3b4305)
 - [NC counties and court codes, tab-delimited](https://gist.github.com/mtdukes/a1689d5c678cc52b3efd6ac1a3409e70)
