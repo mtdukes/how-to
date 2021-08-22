@@ -1,3 +1,4 @@
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -10,7 +11,7 @@ o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bo
 A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html). Use <kbd>CMD</kbd> + <kbd>F</kbd> to search the page, or the jump menu below if you know what you're looking for.
 
 ### Jump to:
-**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick)
+**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick) | [libpst](https://github.com/mtdukes/how-to#libpst)
 
 **R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
 
@@ -199,6 +200,36 @@ curl mtdukes.com --silent | wc -l
 mogrify -crop 800x450+0+40 -path ./cropped *.jpg
 ```
 In a folder of images, crop every jpg image at size 800x450, with a 0px offset from the left (x) and a 40px offset from the top (y).
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## libpst
+A [collection of tools](https://www.five-ten-sg.com/libpst/) to work with and convert PST files (Outlook folders containing email). On Macs, [install with homebrew](https://formulae.brew.sh/formula/libpst).
+
+### Convert PST to MBOX
+```bash
+readpst public_records.pst
+```
+Outputs a single file in mbox format, which is a more open format you can import into a number of email clients.
+
+### Convert PST to individual email files
+```bash
+readpst -e -D public_records.pst
+```
+Separates the PST into individual eml files. Attachments are embedded in the file. The `-D` flag preserves deleted items. Can be read by services like Google's Pinpoint.
+
+### Convert PST to rich text files and export attachments
+```bash
+readpst -S -D public_records.pst
+```
+Separates the PST into individual eml files, each emails rich text body and individual attachment. The numbered files are in eml format, with no extension. The `-D` flag preserves deleted items.
+
+### Convert PST to eml and msg files
+```bash
+readpst -m -D public_records.pst
+```
+Produces both msg and eml files for each message.  The `-D` flag preserves deleted items.
+
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
