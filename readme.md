@@ -21,6 +21,8 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 
 **Convenience files** [U.S. states](https://github.com/mtdukes/how-to#us-states) | [N.C. counties](https://github.com/mtdukes/how-to#us-states)
 
+**Troubleshooting** [Location errors](https://github.com/mtdukes/how-to#location-errors)
+
 # Command line tools
 A collection of tips and tricks for working with tools executed using bash terminals.
 
@@ -554,5 +556,17 @@ Collections of commonly used lists and references in various data structures.
 - [NC counties and election/voter data codes, tab-delimited](https://gist.github.com/mtdukes/c3abc68866e884a7b0fa418e712b40c8)
 - [NC counties and court codes, as tuples](https://gist.github.com/mtdukes/88e089e6dd08b12e57667dd7fe3b4305)
 - [NC counties and court codes, tab-delimited](https://gist.github.com/mtdukes/a1689d5c678cc52b3efd6ac1a3409e70)
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+# Troubleshooting
+A few common things to check when things get mucked up.
+
+## Location errors
+Mapping or working with counties, cities, etc. in North Carolina.
+
+### You three again.
+![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/you-three.jpeg)
+If you're missing one of North Carolina's 100 counties, or your map is inexplicably blank, check New Hanover County, McDowell County and Winston-Salem first. Then think of other location names that might not be a literal, string-to-string match.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
