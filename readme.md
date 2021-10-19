@@ -567,6 +567,7 @@ Mapping or working with counties, cities, etc. in North Carolina.
 
 ### You three again.
 ![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/you-three.jpeg)
+
 If you're missing one of North Carolina's 100 counties, or your map is inexplicably blank, check New Hanover County, McDowell County and Winston-Salem first. Then think of other location names that might not be a literal, string-to-string match.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
