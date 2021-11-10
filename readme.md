@@ -1,4 +1,5 @@
 
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -11,7 +12,7 @@ o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bo
 A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html). Use <kbd>CMD</kbd> + <kbd>F</kbd> to search the page, or the jump menu below if you know what you're looking for.
 
 ### Jump to:
-**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick) | [libpst](https://github.com/mtdukes/how-to#libpst)
+**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick) | [libpst](https://github.com/mtdukes/how-to#libpst) | [gunzip](https://github.com/mtdukes/how-to#gunzip)
 
 **R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
 
@@ -232,6 +233,28 @@ readpst -m -D public_records.pst
 ```
 Produces both msg and eml files for each message.  The `-D` flag preserves deleted items.
 
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## gunzip
+Quickly and efficiently unzip files (or a folder full of files). Can also unzip some files where a normal unzipping GUI throws errors. Useful for `.gz` file extensions.
+
+### Unzip a single file
+```bash
+gunzip map_file.gz
+```
+Unzips a specific file and replaces it with the unzipped version.
+
+### Keep the original zipped file
+```bash
+gunzip -c map_file.gz > map_file.shp
+```
+Uses the `stdout` flag to read to the console, but pipe to a new file to keep the original.
+
+### Unzip a folder full of files
+```bash
+gunzip -r /map_files
+```
+Uses the recursive flag to iterate through every zipped file in a folder and replace it with the unzipped version.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
