@@ -1,5 +1,3 @@
-
-
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -16,7 +14,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 
 **R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
 
-**Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios)
+**Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
 
 **Browser tricks** [PDFs](https://github.com/mtdukes/how-to#pdfs) | [Video](https://github.com/mtdukes/how-to#video)
 
@@ -535,6 +533,15 @@ Now you can compare the ratios.
 7 / 1.1 = 6.4
 ```
 So girls are 6.4 times as likely to pass the test than boys.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## Making sense of symbols
+Tips and tricks for understanding mathematical symbols outside the scope of the normal add, subtract, etc.
+
+### Summation/Product
+![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/summation_product.png)
+As [Freya Holmér](https://twitter.com/FreyaHolmer/status/1436696408506212353) points out, these two "scary math symbols" are just for loops. (Image courtesy of Freya Holmér).
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
