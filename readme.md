@@ -541,7 +541,7 @@ Tips and tricks for understanding mathematical symbols outside the scope of the 
 
 ### Summation/Product
 ![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/summation_product.png)
-As [Freya Holmér](https://twitter.com/FreyaHolmer/status/1436696408506212353) points out, these two "scary math symbols" are just for loops. (Image courtesy of Freya Holmér).
+As [Freya Holmér](https://twitter.com/FreyaHolmer/status/1436696408506212353) points out, these two "scary math symbols" are just for loops (Image courtesy of Freya Holmér).
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
