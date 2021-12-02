@@ -15,13 +15,13 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 
 **R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
 
-**Math for journalists** [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
+**Math for journalists** [Standard deviation](https://github.com/mtdukes/how-to#standard-deviation) | [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
 
 **Browser tricks** [PDFs](https://github.com/mtdukes/how-to#pdfs) | [Video](https://github.com/mtdukes/how-to#video)
 
-**Convenience files** [U.S. states](https://github.com/mtdukes/how-to#us-states) | [N.C. counties](https://github.com/mtdukes/how-to#us-states)
-
 **Troubleshooting** [Location errors](https://github.com/mtdukes/how-to#location-errors)
+
+**Convenience files** [U.S. states](https://github.com/mtdukes/how-to#us-states) | [N.C. counties](https://github.com/mtdukes/how-to#us-states)
 
 # Command line tools
 A collection of tips and tricks for working with tools executed using bash terminals.
@@ -491,9 +491,12 @@ A measure of how tightly clustered, or varied, data is around a set of values. O
 ### Normal distribution
 
 ![Distribution of values based on standard deviation.](https://github.com/mtdukes/how-to/blob/main/media/standard_deviation_diagram.svg)
+
 [(Image by M. W. Toews)](https://commons.wikimedia.org/w/index.php?curid=1903871)
 
 For normally distributed data (often described as a "bell curve"), about two thirds of the observed values fall within one standard deviation of the average.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## Rate comparisons
 Calculating the rate of something happening in a subgroup and comparing it to another can help suss out disproportionate impact, especially when the groups are different sizes.
@@ -583,6 +586,19 @@ Add a `t` parameter to specify the jump point in seconds.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
+# Troubleshooting
+A few common things to check when things get mucked up.
+
+## Location errors
+Mapping or working with counties, cities, etc. in North Carolina.
+
+### You three again.
+![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/you-three.jpeg)
+
+If you're missing one of North Carolina's 100 counties, or your map is inexplicably blank, check New Hanover County, McDowell County and Winston-Salem first. Then think of other location names that might not be a literal, string-to-string match.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 # Convenience files
 Collections of commonly used lists and references in various data structures.
 
@@ -599,18 +615,5 @@ Collections of commonly used lists and references in various data structures.
 - [NC counties and election/voter data codes, tab-delimited](https://gist.github.com/mtdukes/c3abc68866e884a7b0fa418e712b40c8)
 - [NC counties and court codes, as tuples](https://gist.github.com/mtdukes/88e089e6dd08b12e57667dd7fe3b4305)
 - [NC counties and court codes, tab-delimited](https://gist.github.com/mtdukes/a1689d5c678cc52b3efd6ac1a3409e70)
-
-[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
-
-# Troubleshooting
-A few common things to check when things get mucked up.
-
-## Location errors
-Mapping or working with counties, cities, etc. in North Carolina.
-
-### You three again.
-![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/you-three.jpeg)
-
-If you're missing one of North Carolina's 100 counties, or your map is inexplicably blank, check New Hanover County, McDowell County and Winston-Salem first. Then think of other location names that might not be a literal, string-to-string match.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
