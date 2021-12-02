@@ -1,3 +1,4 @@
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -481,6 +482,18 @@ Accepts a dataframe and writes to a sheet specified with the `as_sheets_id` func
 
 # Math for journalism
 Formulas and concepts I always have to look up. For more, read [Numbers in the Newsroom](https://www.ire.org/product/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition-e-version/) by Sarah Cohen.
+
+Also check out Ben Welsh's [Observable collection of calculators](https://observablehq.com/collection/@palewire/numbers-in-the-newsroom) based on Cohen's book.
+
+## Standard deviation
+A measure of how tightly clustered, or varied, data is around a set of values. Often described using the Greek letter sigma (σ).
+
+### Normal distribution
+
+![Distribution of values based on standard deviation.](https://github.com/mtdukes/how-to/blob/main/media/standard_deviation_diagram.svg)
+[(Image by M. W. Toews)](https://commons.wikimedia.org/w/index.php?curid=1903871)
+
+For normally distributed data (often described as a "bell curve"), about two thirds of the observed values fall within one standard deviation of the average.
 
 ## Rate comparisons
 Calculating the rate of something happening in a subgroup and comparing it to another can help suss out disproportionate impact, especially when the groups are different sizes.
