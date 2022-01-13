@@ -1,4 +1,5 @@
 
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -109,6 +110,12 @@ A power tool for processing and converting PDF files.
 pdftk *.pdf cat output all_documents.pdf
 ```
 Combine all the PDF files in the present directory into a single file. *Note: check to make sure the capitalization of the filetype matches.*
+
+### Split a PDF portfolio
+```bash
+pdftk doj_emails_portfolio.pdf unpack_files output doj_emails
+```
+PDF portfolios contain a bunch of individual files bound up in a filetype that needs a native PDF reader. Get around this by unpacking each file into a specific directory.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
