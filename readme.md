@@ -117,6 +117,15 @@ pdftk doj_emails_portfolio.pdf unpack_files output doj_emails
 ```
 PDF portfolios contain a bunch of individual files bound up in a filetype that needs a native PDF reader. Get around this by unpacking each file into a specific directory.
 
+### Split a PDF portfolio with attachments
+```bash
+pdftk doj_emails_portfolio.pdf unpack_files output doj_emails;
+IFS=$'\n'; set -f
+for f in $(find ./doj_emails/ -name '*.pdf'); do pdftk "$f" unpack_files output ./doj_emails/; done
+unset IFS; set +f
+```
+If your PDF portfolio has attachements within the individual PDF, you can use your terminal to unpack the portfolio into a directory, then set up a loop to unpack all of the PDFs in that directory on by one (Thanks to this [Stackoverflow thread](https://stackoverflow.com/questions/4638874/how-to-loop-through-a-directory-recursively-to-delete-files-with-certain-extensi) for tips on bash recursion and dealing with spaces in filenames.)
+
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## esridump
