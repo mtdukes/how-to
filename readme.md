@@ -1,5 +1,6 @@
 
 
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -393,6 +394,15 @@ Use the `url` function from base R to pull formatted data posted in public gists
 my_dataframe <- read_tsv('annoying_file.csv', locale = locale(encoding = "UTF-16LE") )
 ```
 Specify non-UTF encodings you get from the `guess_encoding` output.
+
+### Write and timestamp a csv
+```R
+my_spreadsheet %>% 
+  write_csv(paste0('my_data/my_spreadsheet',
+                   format(Sys.time(),'%Y%m%d%H%M'),
+                   '.csv'))
+```
+Using `Sys.time()`, you can quickly save a dataset with an automatic timestamp for easy organization. No more `my_spreadsheet_final_Final_FINAL_FINALFORREAL.csv`!
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
