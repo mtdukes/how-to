@@ -73,6 +73,12 @@ ffmpeg -ss 5 -t 1.7 -i video.MOV -vf "fps=24,scale=640:-1:flags=lanczos,split[s0
 ```
 Create a high quality GIF 640 pixels wide at 24 frames per second using the specified video file, skipping 5 seconds and lasting 1.7 seconds and save the output.
 
+### Caption the GIF
+```bash
+ffmpeg -ss 278.8 -t 3.3 -i wings.mp4 -filter_complex "fps=24,scale=640:-1:flags=lanczos,drawtext=box=1:boxcolor=black@0.4:boxborderw=5:fontfile=/System/Library/Fonts/Supplemental/Impact.ttf:text='CONTRARY TO MY APPEARANCE,':fontsize=48:fontcolor=white:x=(w-tw)/2:y=(h/PHI)+th,drawtext=box=1:boxcolor=black@0.4:boxborderw=5:fontfile=/System/Library/Fonts/Supplemental/Impact.ttf:text='I AM ENJOYING THIS.':fontsize=48:fontcolor=white:x=(w-tw)/2:y=(h/PHI)+th+50,split[x1][x2];[x1]palettegen[p];[x2][p]paletteuse" wings.gif
+```
+Tweak the parameters (or delete the second line) to adjust the font, text etc. of the caption.
+
 ### MOV to mp4
 ```bash
 ffmpeg -i apple.mov -vcodec h264 -acodec aac apple.mp4
