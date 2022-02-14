@@ -13,7 +13,7 @@ o888o   o888o  `Y8bood8P'        `8'      `8'                   o888o      `Y8bo
 A cheat sheet for common data journalism stuff. For details on installing these tools, [see how I work](http://mtdukes.com/work.html). Use <kbd>CMD</kbd> + <kbd>F</kbd> to search the page, or the jump menu below if you know what you're looking for.
 
 ### Jump to:
-**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick) | [libpst](https://github.com/mtdukes/how-to#libpst) | [gunzip](https://github.com/mtdukes/how-to#gunzip)
+**Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick) | [libpst](https://github.com/mtdukes/how-to#libpst) | [gunzip](https://github.com/mtdukes/how-to#gunzip) | [sysctl](https://github.com/mtdukes/how-to#sysctl)
 
 **R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
 
@@ -277,6 +277,15 @@ Uses the `stdout` flag to read to the console, but pipe to a new file to keep th
 gunzip -r /map_files
 ```
 Uses the recursive flag to iterate through every zipped file in a folder and replace it with the unzipped version.
+
+## sysctl
+A suite of tools to anaylze your system (for Mac).
+
+### Examine CPU threads
+```bash
+sysctl hw.physicalcpu hw.logicalcpu
+```
+Provides an output of physical and logical cores [your CPU has](https://superuser.com/questions/1101311/how-many-cores-does-my-mac-have).
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
