@@ -115,8 +115,16 @@ A power tool for processing and converting PDF files.
 ### Combine files
 ```bash
 pdftk *.pdf cat output all_documents.pdf
+pdftk doc01.pdf doc02.pdf cat output all_documents.pdf
 ```
-Combine all the PDF files in the present directory into a single file. *Note: check to make sure the capitalization of the filetype matches.*
+Combine all the PDF files in the present directory into a single file. Or specify individual files *Note: check to make sure the capitalization of the filetype matches.*
+
+### Split files by page number
+```bash
+pdftk blue_docs.pdf cat 1-700 output blue_docs01.pdf
+pdftk blue_docs.pdf cat 701-end output blue_docs02.pdf
+````
+Specify the page number or use the `end` keyword to slice up a document.
 
 ### Split a PDF portfolio
 ```bash
