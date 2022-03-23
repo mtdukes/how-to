@@ -378,6 +378,12 @@ gsub('\\(', ',for real', 'Replace the literal parenthesis (' )
 ```
 Enter a [pattern](http://uc-r.github.io/regex), replacement and data value to search.
 
+### Get rid of non-ASCII characters
+```R
+gsub('[^ -~]', '', '日本人GALATIA')
+```
+This [pattern](https://boyter.org/2014/02/explain-regex-matches-ascii-characters/), translates to "not any ASCII character". Useful when cleaning a malformed file.
+
 ### Load a file with an annoying encoding
 ```R
 vax_data <- read.delim('cnty20210731.csv', fileEncoding = 'UTF-16LE', sep = '\t',
