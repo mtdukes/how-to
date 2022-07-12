@@ -1,6 +1,3 @@
-
-
-
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -43,6 +40,12 @@ Return lines containing a string from a specified file and print to the command 
 grep "\"DUKES\",\"MICHAEL\",\"TYLER\"" absentee.csv > dukes.csv
 ```
 Search for a string with quotes and output all lines to a file.
+
+### Recursively search a directory of files, first line only
+```bash
+head -1 ./*/*|grep -B1 'Hospital overall rating' > variable.txt
+```
+Combining `head` and `grep` with a pipe allows you to chain commands, and the `-B1` flag allows you to output the file name.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
