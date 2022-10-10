@@ -318,7 +318,7 @@ Run a section of code in your R script.
 ### Use a pipe
 <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>
 
-Input a `%>%` at your cursor to pipe output to the next line.
+Input a `%>%` at your cursor to pipe output to the next line with the `dplyr` library.
 
 ### Use an assignment
 <kbd>Option</kbd> + <kbd>-</kbd>
@@ -480,6 +480,16 @@ nc_voters %>%
 Specify the number of rows from the dataframe to return.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+### Convert table to uppercase
+```R
+clean_table <- dirty_table %>% 
+  mutate(across(where(is.character), toupper))
+```
+Tranforms all columns containing characters to uppercase all at once. Incredibly useful for cleaning data!
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 
 ## plyr
 [Tools to solve common problems](https://www.rdocumentation.org/packages/plyr/versions/1.8.6), like performing the same task over and over. *NOTE: This package conflicts with some dplyr commands, so if you're getting weird errors, this might be why.*
