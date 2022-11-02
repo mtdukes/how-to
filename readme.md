@@ -490,6 +490,15 @@ Tranforms all columns containing characters to uppercase all at once. Incredibly
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
+## Fix multibyte strings and bad character encodings
+
+```R
+df_clean <- df %>% mutate(across(everything(), ~ iconv(.x, sub = '') ))
+```
+Works across an entire dataframe, removing all malformed characters, multibyte strings or bad, non-UTF8 encodings that can't be converted.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
 
 ## plyr
 [Tools to solve common problems](https://www.rdocumentation.org/packages/plyr/versions/1.8.6), like performing the same task over and over. *NOTE: This package conflicts with some dplyr commands, so if you're getting weird errors, this might be why.*
