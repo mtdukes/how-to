@@ -385,7 +385,7 @@ Enter a [pattern](http://uc-r.github.io/regex), replacement and data value to se
 ```R
 gsub('[^ -~]', '', '日本人GALATIA')
 ```
-This [pattern](https://boyter.org/2014/02/explain-regex-matches-ascii-characters/), translates to "not any ASCII character". Useful when cleaning a malformed file.
+This [pattern](https://boyter.org/2014/02/explain-regex-matches-ascii-characters/), translates to "not any ASCII character". Useful when cleaning a malformed file. Can also use the `[^ -~]` in other contexts.
 
 ### Load a file with an annoying encoding
 ```R
