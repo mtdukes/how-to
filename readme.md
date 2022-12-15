@@ -1,3 +1,4 @@
+
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -15,6 +16,8 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 **R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
 
 **Math for journalists** [Standard deviation](https://github.com/mtdukes/how-to#standard-deviation) | [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
+
+**GIS tips**
 
 **Browser tricks** [PDFs](https://github.com/mtdukes/how-to#pdfs) | [Video](https://github.com/mtdukes/how-to#video)
 
@@ -635,6 +638,26 @@ Tips and tricks for understanding mathematical symbols outside the scope of the 
 ### Summation/Product
 ![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/summation_product.png)
 As [Freya Holmér](https://twitter.com/FreyaHolmer/status/1436696408506212353) points out, these two "scary math symbols" are just for loops (Image courtesy of Freya Holmér).
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+# GIS tips
+General guidance for working with mapping files and geographic information systems.
+
+## Latitude and Longitude
+![enter image description here](https://github.com/mtdukes/how-to/blob/main/media/lat_lng.gif)
+Latitude is the **Y axis**, with the **equator** at 0. Longitude is the **X axis**, with the **prime meridian** at 0.
+
+North America, located in the north-west quadrant, latitude values will be **positive or N**. Longitude values will be **negative or W**.
+
+## NC bounding box
+For subsetting coordinates or geometries that requires a "bounding box," use these coordinates for North Carolina (h/t to [Anthony Louis D'Agostino](https://anthonylouisdagostino.com/bounding-boxes-for-all-us-states/)).
+|reference|value|
+|:--|--:|
+| xmin | -84.321869 |
+| ymin | 33.842316 |
+| xmax | -75.460621 |
+| ymax | 36.588117 |
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
