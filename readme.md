@@ -17,7 +17,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 
 **Math for journalists** [Standard deviation](https://github.com/mtdukes/how-to#standard-deviation) | [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
 
-**GIS tips**
+**GIS tips** [Latitude and longitude](https://github.com/mtdukes/how-to#latitude-and-longitude) | [NC bounding box](https://github.com/mtdukes/how-to#nc-bounding-box)
 
 **Browser tricks** [PDFs](https://github.com/mtdukes/how-to#pdfs) | [Video](https://github.com/mtdukes/how-to#video)
 
@@ -646,6 +646,9 @@ General guidance for working with mapping files and geographic information syste
 
 ## Latitude and Longitude
 ![enter image description here](https://github.com/mtdukes/how-to/blob/main/media/lat_lng.gif)
+
+(Image credit [Illinois State University](https://journeynorth.org/tm/LongitudeIntro.html))
+
 Latitude is the **Y axis**, with the **equator** at 0. Longitude is the **X axis**, with the **prime meridian** at 0.
 
 North America, located in the north-west quadrant, latitude values will be **positive or N**. Longitude values will be **negative or W**.
