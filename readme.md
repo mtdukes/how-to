@@ -410,6 +410,12 @@ Prints out the full numeral in your current workspace.
 ## readr
 A ["fast and friendly way"](https://www.rdocumentation.org/packages/readr/versions/1.3.1) to read in data. Part of the tidyverse suite of packages.
 
+### Specify a default column type
+```R
+my_data <- read_csv('../my_data.csv', col_types = cols(.default = 'c', date = 'D'))
+```
+Tell `read_csv` to import all columns as a character by default, except for the date field, which should be a date (you can remove the date part if you want to read everything in as a character).
+
 ### Get the file encoding
 ```R
 guess_encoding(file = 'annoying_file.csv')
@@ -482,16 +488,12 @@ nc_voters %>%
 ```
 Specify the number of rows from the dataframe to return.
 
-[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
-
 ### Convert table to uppercase
 ```R
 clean_table <- dirty_table %>% 
   mutate(across(where(is.character), toupper))
 ```
 Tranforms all columns containing characters to uppercase all at once. Incredibly useful for cleaning data!
-
-[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## Fix multibyte strings and bad character encodings
 
@@ -501,7 +503,6 @@ df_clean <- df %>% mutate(across(everything(), ~ iconv(.x, sub = '') ))
 Works across an entire dataframe, removing all malformed characters, multibyte strings or bad, non-UTF8 encodings that can't be converted.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
-
 
 ## plyr
 [Tools to solve common problems](https://www.rdocumentation.org/packages/plyr/versions/1.8.6), like performing the same task over and over. *NOTE: This package conflicts with some dplyr commands, so if you're getting weird errors, this might be why.*
