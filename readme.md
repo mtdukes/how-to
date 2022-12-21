@@ -13,7 +13,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 ### Jump to:
 **Command line tools** [grep](https://github.com/mtdukes/how-to#grep) | [head/tail](https://github.com/mtdukes/how-to#headtail) | [ffmpeg](https://github.com/mtdukes/how-to#ffmpeg) | [pdftk](https://github.com/mtdukes/how-to#pdftk) | [esridump](https://github.com/mtdukes/how-to#esridump) | [wget](https://github.com/mtdukes/how-to#wget) | [file](https://github.com/mtdukes/how-to#file) | [sed](https://github.com/mtdukes/how-to#sed) | [wc](https://github.com/mtdukes/how-to#wc) | [imagemagick](https://github.com/mtdukes/how-to#imagemagick) | [libpst](https://github.com/mtdukes/how-to#libpst) | [gunzip](https://github.com/mtdukes/how-to#gunzip) | [sysctl](https://github.com/mtdukes/how-to#sysctl)
 
-**R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4)
+**R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4) | [janitor](https://github.com/mtdukes/how-to#janitor)
 
 **Math for journalists** [Standard deviation](https://github.com/mtdukes/how-to#standard-deviation) | [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
 
@@ -558,6 +558,30 @@ write_sheet(census_data,
             )
 ```
 Accepts a dataframe and writes to a sheet specified with the `as_sheets_id` function and a URL. If a sheet name isn't specified, it will create a new sheet with the dataframe name.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## janitor
+[Excellent library](https://cran.r-project.org/web/packages/janitor/vignettes/janitor.html) with convenience functions for cleaning and exploring data.
+
+### Get the totals of a dataframe
+```R
+zoo_animals %>%
+  count(animal_type) %>%
+  adorn_totals()
+```
+Use `adorn_totals` to tally up a number column (or multiple columns) in a dataframe. Particularly useful with `count`.
+
+### Calculate percentages across categories
+```R
+zoo_animals %>%
+  count(animal_type) %>%
+  adorn_totals() %>% 
+  adorn_percentages('col') %>% 
+  adorn_pct_formatting() %>% 
+  adorn_ns(position = "front")
+```
+A few extra lines of code place both the raw number and percentage together.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
