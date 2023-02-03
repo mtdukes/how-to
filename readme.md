@@ -1,4 +1,3 @@
-
 ```
 ooooo   ooooo   .oooooo.   oooooo   oooooo     oooo         ooooooooooooo   .oooooo.
 `888'   `888'  d8P'  `Y8b   `888.    `888.     .8'          8'   888   `8  d8P'  `Y8b
@@ -501,6 +500,19 @@ Tranforms all columns containing characters to uppercase all at once. Incredibly
 df_clean <- df %>% mutate(across(everything(), ~ iconv(.x, sub = '') ))
 ```
 Works across an entire dataframe, removing all malformed characters, multibyte strings or bad, non-UTF8 encodings that can't be converted.
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## stringr
+A suite of convenient functions [for working with strings](https://stringr.tidyverse.org/), and part of the [tidyverse](https://www.tidyverse.org/) package.
+
+### Remove prefix characters from column names
+
+```R
+clean_table <- dirty_table %>%
+  rename_all(~str_replace(., 'column_prefix', ''))
+```
+Uses `str_replace` and `rename_all` to replace all matching patterns. Uses regex.
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
