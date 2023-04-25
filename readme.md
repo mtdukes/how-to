@@ -673,8 +673,40 @@ So girls are 6.4 times as likely to pass the test than boys.
 Tips and tricks for understanding mathematical symbols outside the scope of the normal add, subtract, etc.
 
 ### Summation/Product
-![Check New Hanover County, McDowell County and Winston-Salem](https://github.com/mtdukes/how-to/blob/main/media/summation_product.png)
+![Not scary!](https://github.com/mtdukes/how-to/blob/main/media/summation_product.png)
 As [Freya Holmér](https://twitter.com/FreyaHolmer/status/1436696408506212353) points out, these two "scary math symbols" are just for loops (Image courtesy of Freya Holmér).
+
+[▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
+
+## Poisson distributions
+In contexts like public health, rare events such as cancer or maternal mortality assume a *Poisson distribution*, which we can use to calculate confidence intervals used to compare rates. For more, see [this handout from the Utah Department of Health and Human Services](https://github.com/mtdukes/how-to/blob/main/documents/confidence_intervals.pdf):
+
+> This distribution is not symmetric about its mean and so the associated confidence intervals will not be symmetric (the upper limit is farther from the estimate than is the lower limit).
+
+You can use a [Poisson confidence interval calculator](https://www.statology.org/poisson-confidence-interval-calculator/) to calculate the upper and lower bounds of the confidence intervals for rates like these.
+
+```R
+#Pregnancy-related deaths (observed events)
+1345
+
+#95% confidence Interval
+0.95
+
+#Calcuated confidence interval
+[1274.07160, 1418.84932]
+
+#Live births
+4636541
+
+#Pregnancy-related death rate per 100,000 live births
+1345 / 4636541 * 100000 = 29.0
+
+#Lower bound
+1274.07160 / 4636541 * 100000 = 27.5
+
+#Upper bound
+1418.84932 / 4636541 * 100000 = 30.6
+```
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
