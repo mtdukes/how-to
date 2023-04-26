@@ -14,7 +14,7 @@ A cheat sheet for common data journalism stuff. For details on installing these 
 
 **R packages** [shortcut keys](https://github.com/mtdukes/how-to#shortcut-keys) | [base](https://github.com/mtdukes/how-to#base) | [readr](https://github.com/mtdukes/how-to#readr) | [scales](https://github.com/mtdukes/how-to#scales) | [ggpmisc](https://github.com/mtdukes/how-to#ggpmisc) | [dplyr](https://github.com/mtdukes/how-to#dplyr) | [stringr](https://github.com/mtdukes/how-to#stringr) | [plyr](https://github.com/mtdukes/how-to#plyr) | [clipr](https://github.com/mtdukes/how-to#clipr) | [googlesheets4](https://github.com/mtdukes/how-to#googlesheets4) | [janitor](https://github.com/mtdukes/how-to#janitor)
 
-**Math for journalists** [Standard deviation](https://github.com/mtdukes/how-to#standard-deviation) | [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
+**Math for journalists** [Standard deviation](https://github.com/mtdukes/how-to#standard-deviation) | [Rate comparisons](https://github.com/mtdukes/how-to#rate-comparisons) | [Odds ratios](https://github.com/mtdukes/how-to#odds-ratios) | [Poisson distributions](https://github.com/mtdukes/how-to#poisson-distributions) | [Making sense of symbols](https://github.com/mtdukes/how-to#making-sense-of-symbols)
 
 **GIS tips** [Latitude and longitude](https://github.com/mtdukes/how-to#latitude-and-longitude) | [NC bounding box](https://github.com/mtdukes/how-to#nc-bounding-box)
 
@@ -692,8 +692,8 @@ As [Freya Holmér](https://twitter.com/FreyaHolmer/status/1436696408506212353) p
 In contexts like public health, rare events such as cancer or maternal mortality assume a *Poisson distribution*, which we can use to calculate confidence intervals used to compare rates. For more, see [this handout from the Utah Department of Health and Human Services](https://github.com/mtdukes/how-to/blob/main/documents/confidence_intervals.pdf):
 
 > This distribution is not symmetric about its mean and so the associated confidence intervals will not be symmetric (the upper limit is farther from the estimate than is the lower limit).
-
-You can use a [Poisson confidence interval calculator](https://www.statology.org/poisson-confidence-interval-calculator/) to calculate the upper and lower bounds of the confidence intervals for rates like these.
+[
+You can use a Poisson confidence interval calculator (examples [here](https://www.statology.org/poisson-confidence-interval-calculator/) and [here](https://www.analyticscalculators.com/calculator.aspx?id=86)) to calculate the upper and lower bounds of the confidence intervals for rates like these.
 
 ```R
 #Pregnancy-related deaths (observed events)
