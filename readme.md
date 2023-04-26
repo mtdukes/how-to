@@ -692,7 +692,7 @@ As [Freya Holmér](https://twitter.com/FreyaHolmer/status/1436696408506212353) p
 In contexts like public health, rare events such as cancer or maternal mortality assume a *Poisson distribution*, which we can use to calculate confidence intervals used to compare rates. For more, see [this handout from the Utah Department of Health and Human Services](https://github.com/mtdukes/how-to/blob/main/documents/confidence_intervals.pdf):
 
 > This distribution is not symmetric about its mean and so the associated confidence intervals will not be symmetric (the upper limit is farther from the estimate than is the lower limit).
-[
+
 You can use a Poisson confidence interval calculator (examples [here](https://www.statology.org/poisson-confidence-interval-calculator/) and [here](https://www.analyticscalculators.com/calculator.aspx?id=86)) to calculate the upper and lower bounds of the confidence intervals for rates like these.
 
 ```R
