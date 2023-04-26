@@ -404,6 +404,16 @@ options(scipen = 999)
 ```
 Prints out the full numeral in your current workspace.
 
+### Test for significance when preparing proportions
+
+```R
+#Black maternal mortality in 2020 and 2021 compared to the number of live births
+prop.test(x = c(323, 506), n = c(397827, 517889), correct = FALSE)
+```
+Use a 2-sample test for equality of proportions to generate a p-value, which tells you [how likely it is that the observed difference is due to random chance](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4111019/#:~:text=The%20P%20value%20is%20defined,groups%20is%20due%20to%20chance.). Typically, p-values of less than 0.05 are considered statistically signficant (95% confidence interval).
+
+The `prop.test` function accepts a vector of values for the numerator (`x`) and the denominator (`n`).
+
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 ## readr
