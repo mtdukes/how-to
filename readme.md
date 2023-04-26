@@ -708,6 +708,15 @@ You can use a [Poisson confidence interval calculator](https://www.statology.org
 1418.84932 / 4636541 * 100000 = 30.6
 ```
 
+If you don't want to use a calculator, you can also calculate the upper and lower bounds using the chi square critical value in R [using the formulas here](https://www.math.mcmaster.ca/peter/s743/poissonalpha.html).
+
+```R
+#for 95% (0.95) confidence interval
+#where x is the number of observed events
+lower_bound <- qchisq((1-ci)/2, 2*x)/2
+upper_bound < qchisq(1-(1-ci)/2, 2*(x+1))/2
+```
+
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 # GIS tips
