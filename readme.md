@@ -727,13 +727,29 @@ lower_bound <- qchisq((1-ci)/2, 2*x)/2
 upper_bound < qchisq(1-(1-ci)/2, 2*(x+1))/2
 ```
 
+## More significance testing
+
+![Confidence interval, illustrated](https://github.com/mtdukes/how-to/blob/main/media/ci_plot.gif)
+
+
+| Confidence level | Alpha (α) | α/2 | Notation | Z score (Z<sub>α/2</sub>) |
+|--|--|--|--|--|
+| 80% | 0.20 | 0.100 | Z<sub>0.90</sub> | 1.285 |
+| 90% | 0.10 | 0.050 | Z<sub>0.95</sub> | 1.645 |
+| 94% | 0.06 | 0.030 | Z<sub>0.97</sub> | 1.88 |
+| 95% | 0.05 | 0.025 | Z<sub>0.975</sub> | 1.96 |
+| 96% | 0.04 | 0.020 | Z<sub>0.98</sub> | 2.055 |
+| 98% | 0.02 | 0.010 | Z<sub>0.99</sub> | 2.33 |
+| 99% | 0.01 | 0.005 | Z<sub>0.995</sub> | 2.575 |
+
+
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
 
 # GIS tips
 General guidance for working with mapping files and geographic information systems.
 
 ## Latitude and Longitude
-![enter image description here](https://github.com/mtdukes/how-to/blob/main/media/lat_lng.gif)
+![Latitude and longitude](https://github.com/mtdukes/how-to/blob/main/media/lat_lng.gif)
 
 (Image credit [Illinois State University](https://journeynorth.org/tm/LongitudeIntro.html))
 
