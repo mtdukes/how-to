@@ -736,12 +736,12 @@ One of the most common confidence levels is 95% (also called the [97.5th percent
 | Confidence level | Alpha (α) | α/2 | Z<sub>α/2</sub> | Z<sub>1 - α/2</sub> | Z score (Z<sub>α/2</sub>) |
 |--|--|--|--|--|--|
 | 80% | 0.20 | 0.100 | Z<sub>0.1</sub> | Z<sub>0.90</sub> | <-1.285, >1.285 |
-| 90% | 0.10 | 0.050 | Z<sub>0.05</sub> | Z<sub>0.90</sub> | <-1.645, >1.645 |
-| 94% | 0.06 | 0.030 | Z<sub>0.03</sub> | Z<sub>0.90</sub> | <-1.88, >1.88 |
-| **95%** | **0.05** | **0.025** | **Z<sub>0.025</sub>** | **Z<sub>0.90</sub>** | **<-1.96, >1.96** |
-| 96% | 0.04 | 0.020 | Z<sub>0.02</sub> | Z<sub>0.90</sub> | <-2.055, >2.055 |
-| 98% | 0.02 | 0.010 | Z<sub>0.01</sub> | Z<sub>0.90</sub> | <-2.33, >2.33 |
-| 99% | 0.01 | 0.005 | Z<sub>0.005</sub> | Z<sub>0.90</sub> | <-2.575, >2.575 |
+| 90% | 0.10 | 0.050 | Z<sub>0.05</sub> | Z<sub>0.95</sub> | <-1.645, >1.645 |
+| 94% | 0.06 | 0.030 | Z<sub>0.03</sub> | Z<sub>0.96</sub> | <-1.88, >1.88 |
+| **95%** | **0.05** | **0.025** | **Z<sub>0.025</sub>** | **Z<sub>0.975</sub>** | **<-1.96, >1.96** |
+| 96% | 0.04 | 0.020 | Z<sub>0.02</sub> | Z<sub>0.98</sub> | <-2.055, >2.055 |
+| 98% | 0.02 | 0.010 | Z<sub>0.01</sub> | Z<sub>0.99</sub> | <-2.33, >2.33 |
+| 99% | 0.01 | 0.005 | Z<sub>0.005</sub> | Z<sub>0.995</sub> | <-2.575, >2.575 |
 
 The U.S. Census Bureau [has good resources for testing for signficance](https://www2.census.gov/programs-surveys/acs/tech_docs/accuracy/2021_ACS_Accuracy_Document_Worked_Examples.pdf#page=6) with their data, which used a 90% confidence level.
 
