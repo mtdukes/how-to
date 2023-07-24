@@ -26,7 +26,7 @@ tidyr::tibble(
 
 ### Create a named list from a vector of values and labels
 
-Given two named vectors containing values (data) and labels (column names), create a named list.
+Given two vectors containing values (data) and labels (column names), create a named list.
 
 ```R
 setNames(as.list(c('DUKES', 'TYLER', '101 MAIN ST', 'RALEIGH', 'NC')),
@@ -34,5 +34,24 @@ setNames(as.list(c('DUKES', 'TYLER', '101 MAIN ST', 'RALEIGH', 'NC')),
          )
 ```
 
-Useful for assigning values in a dataframe.
+Useful for later assigning values in a dataframe by name.
+
+### Convert named list to dataframe
+
+Given two vectors stored into a named list, asign the values to columns in a dataframe or tibble.
+
+```R
+user_list <- setNames(as.list(c('DUKES', 'TYLER', '101 MAIN ST', 'RALEIGH', 'NC')),
+         as.list(c('last_name', 'first_name', 'st_address', 'city', 'state'))
+         ) 
+user_table <- tidyr::tibble(
+  last_name = user_list$last_name,
+  first_name = user_list$first_name,
+  st_address = user_list$st_address,
+  city = user_list$city,
+  state = user_list$state,
+)
+```
+
+
 
