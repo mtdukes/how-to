@@ -53,5 +53,12 @@ user_table <- tidyr::tibble(
 )
 ```
 
+### Convert a list of lists into a dataframe
 
+Given a "big list" containing named lists, convert it to a dataframe/tibble.
+
+```R
+parsed_tibble <- list_of_lists %>%
+  map_df(as_tibble)
+```
 
