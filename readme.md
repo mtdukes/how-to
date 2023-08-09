@@ -826,5 +826,6 @@ Collections of commonly used lists and references in various data structures.
 - [NC counties and court codes, tab-delimited](https://gist.github.com/mtdukes/a1689d5c678cc52b3efd6ac1a3409e70)
 - [NC municipalities and counties, tab-delimited](https://gist.github.com/mtdukes/809c44e2e33f35425b9d4a173c6a4151)
 - [NC places and census designation, tab-delimited](https://gist.github.com/mtdukes/17073dc3116a082cbb7ff7dcf6efe669)
+- [Not where you expect - A list of NC cities not in the counties you think](not-where-you-expect.md)
 
 [▲ BACK TO NAV](https://github.com/mtdukes/how-to#jump-to)
