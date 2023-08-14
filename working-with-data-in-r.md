@@ -62,3 +62,25 @@ parsed_tibble <- list_of_lists %>%
   map_df(as_tibble)
 ```
 
+### Loop through a dataframe
+
+Use a `for` loop to iterate through a dataframe row by row, using the row index number. Useful for when you need to access multiple columns in a dataframe, instead of just one set of values.
+
+```R
+df_to_loop -> tidyr::tibble(
+  column_a = c(1, 2, 3, 4),
+  column_b = c('Bob', 'Jenee', 'Marcus', 'Sally')
+  )
+
+# loop through each row and print the variables
+for(row in 1:nrow(df_to_loop)){
+  
+  #store the value of the row item, rather than the item as a dataframe
+  column_a_value <- df_to_loop[row, 'column_a'][[1]]
+  column_b_value <- df_to_loop[row, 'column_b'][[1]]
+
+  #print the values in a loop
+  print(column_a_value)
+  print(column_b_value)
+}
+```
