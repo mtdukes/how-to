@@ -62,6 +62,33 @@ parsed_tibble <- list_of_lists %>%
   map_df(as_tibble)
 ```
 
+### Create an empty dataframe for known columns/data types
+
+Use `tibble` from the `tidyverse` package to create a dataframe with column names and defined [column types](https://tibble.tidyverse.org/articles/types.html).
+
+```R
+#define the dataframe and the character types
+df_template <- tidyr::tibble(
+  column_one = character(),
+  column_two = double(),
+  columnt_three = logical(),
+  column_four = integer()
+)
+
+#duplicate tempalte to create an empty table
+my_table <- df_template
+```
+
+### Create an empty dataframe for unknown columns/data types
+
+When you don't know how many columns you need or what data type they'll be, initialize a table with no rows or defined columns.
+
+```R
+new_table <- tidyr::tibble()
+```
+
+## Processing data
+
 ### Loop through a dataframe
 
 Use a `for` loop to iterate through a dataframe row by row, using the row index number. Useful for when you need to access multiple columns in a dataframe, instead of just one set of values.
