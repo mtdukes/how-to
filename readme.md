@@ -249,7 +249,7 @@ A [collection of tools](https://www.five-ten-sg.com/libpst/) to work with and co
 ```bash
 readpst public_records.pst
 ```
-Outputs a single file in mbox format, which is a more open format you can import into a number of email clients.
+Outputs a single file in mbox format, which is a more open format you can import into a number of email clients. That includes Mozilla's Thunderbird, which you can import [using the ImportExportNG add-on](https://addons.thunderbird.net/en-US/thunderbird/addon/importexporttools-ng/).
 
 ### Convert PST to individual email files
 ```bash
